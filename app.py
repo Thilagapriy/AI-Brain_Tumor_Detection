@@ -15,28 +15,14 @@ if 'started' not in st.session_state:
     st.session_state.started = False
 
 if not st.session_state.started:
-    # Centered Logo on Start Screen
-    st.markdown("<div style='text-align: center; margin-bottom: 30px;'>", unsafe_allow_html=True)
-    st.image("logo.png", width=300)  # Your logo – adjust width if needed
-    st.markdown("</div>", unsafe_allow_html=True)
-    
     st.title("🧠 Brain Tumor Detection AI")
     st.markdown("### Educational & Research Tool")
     st.markdown("**Disclaimer:** This is for educational purposes only. Always consult a medical professional.")
-    
-    # Centered Start Button
-    st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
-    if st.button("Start Application", use_container_width=True):
+    if st.button("Start Application"):
         st.session_state.started = True
         st.rerun()
-    st.markdown("</div>", unsafe_allow_html=True)
 else:
-    # Logo + Title on Main Dashboard
-    col_logo, col_title = st.columns([1, 4])
-    with col_logo:
-        st.image("logo.png", width=100)
-    with col_title:
-        st.title("Brain Tumor AI Assistant")
+    st.title("Brain Tumor AI Assistant")
 
     # 4 Big Buttons for Navigation
     col1, col2 = st.columns(2)
