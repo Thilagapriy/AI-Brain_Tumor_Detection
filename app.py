@@ -18,13 +18,17 @@ if not st.session_state.started:
     st.title("🧠 Brain Tumor Detection AI")
     st.markdown("### Educational & Research Tool")
     st.markdown("**Disclaimer:** This is for educational purposes only. Always consult a medical professional.")
-    if st.button("Start Application"):
+    
+    # Centered Start Button
+    st.markdown("<div style='text-align: center; margin-top: 50px;'>", unsafe_allow_html=True)
+    if st.button("Start Application", use_container_width=True):
         st.session_state.started = True
         st.rerun()
+    st.markdown("</div>", unsafe_allow_html=True)
 else:
     st.title("Brain Tumor AI Assistant")
 
-    # 4 Big Buttons for Navigation
+    # 4 Big Navigation Buttons
     col1, col2 = st.columns(2)
     
     with col1:
