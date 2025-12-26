@@ -40,3 +40,4 @@ else:
             st.switch_page("pages/3_History.py")
         if st.button("💬 Chatbot"):
             st.switch_page("pages/4_Chatbot.py")
+
