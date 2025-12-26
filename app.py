@@ -19,7 +19,6 @@ if not st.session_state.started:
     st.markdown("### Educational & Research Tool")
     st.markdown("**Disclaimer:** This is for educational purposes only. Always consult a medical professional.")
     
-    # Centered Start Button
     st.markdown("<div style='text-align: center; margin-top: 50px;'>", unsafe_allow_html=True)
     if st.button("Start Application", use_container_width=True):
         st.session_state.started = True
@@ -28,17 +27,16 @@ if not st.session_state.started:
 else:
     st.title("Brain Tumor AI Assistant")
 
-    # 4 Big Navigation Buttons
     col1, col2 = st.columns(2)
     
     with col1:
         if st.button("🔍 Detect Tumor"):
-            st.switch_page("detection.py")
+            st.switch_page("pages/1_Detection.py")
         if st.button("📄 Scan Report"):
-            st.switch_page("report.py")
+            st.switch_page("pages/2_Report.py")
     
     with col2:
         if st.button("📊 View History"):
-            st.switch_page("history.py")
+            st.switch_page("pages/3_History.py")
         if st.button("💬 Chatbot"):
-            st.switch_page("chatbot.py")
+            st.switch_page("pages/4_Chatbot.py")
