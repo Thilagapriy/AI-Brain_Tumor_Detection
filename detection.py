@@ -28,4 +28,5 @@ if uploaded_file is not None:
         patient = st.text_input("Patient Name (to save in history)")
         if st.button("Save Result to History") and patient:
             save_history(patient, cls)
+
             st.success("Saved!")
